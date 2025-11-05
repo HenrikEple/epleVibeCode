@@ -6,7 +6,7 @@
 - git clone: git clone https://github.com/HenrikEple/epleVibeCode.git
 
 ## Sjekke om dere har installert. Om ikke installer: 
-- Visual Studio Code: 
+### Visual Studio Code: 
     - Install: https://code.visualstudio.com/
 ### Node: 
     - npm -v i terminal skal gi versjonsnummer
