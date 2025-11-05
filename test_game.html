@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Babylon.js — Flat Map Starter</title>
+  <style>
+    html, body { height: 100%; margin: 0; overflow: hidden; }
+    #renderCanvas { width: 100%; height: 100%; display: block; touch-action: none; }
+  </style>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+
+  <!-- Babylon core -->
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+  <script>
+    const canvas = document.getElementById("renderCanvas");
+    const engine = new BABYLON.Engine(canvas, true);
+
+    function createScene() {
+      const scene = new BABYLON.Scene(engine);
+      scene.clearColor = new BABYLON.Color4(0.72, 0.84, 1.0, 1.0); // light sky
+
+      // Camera: slightly angled top-down, locked so students always see the map
+      const cam = new BABYLON.ArcRotateCamera(
+        "cam",
+        BABYLON.Tools.ToRadians(45),      // alpha
+        BABYLON.Tools.ToRadians(65),      // beta
+        80,                                // radius
+        new BABYLON.Vector3(0, 0, 0),     // target
+        scene
+      );
+      cam.lowerAlphaLimit = cam.upperAlphaLimit = cam.alpha;
+      cam.lowerBetaLimit  = cam.upperBetaLimit  = cam.beta;
+      cam.lowerRadiusLimit = cam.upperRadiusLimit = cam.radius;
+      cam.attachControl(canvas, false);
+
+      // Light
+      new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene).intensity = 0.85;
+
+      // Helper to make a quick checker texture in code
+      function makeChecker(size=1024, squares=16, a="#c2c8cc", b="#b3b9be") {
+        const dt = new BABYLON.DynamicTexture("checker", size, scene, true);
+        const ctx = dt.getContext();
+        const cell = size / squares;
+        for (let y = 0; y < squares; y++) {
+          for (let x = 0; x < squares; x++) {
+            ctx.fillStyle = ((x + y) % 2 === 0) ? a : b;
+            ctx.fillRect(x * cell, y * cell, cell, cell);
+          }
+        }
+        dt.update();
+        return dt;
+      }
+
+      // Flat map (ground)
+      const MAP_W = 120, MAP_H = 80;
+      const ground = BABYLON.MeshBuilder.CreateGround("ground", { width: MAP_W, height: MAP_H }, scene);
+
+      const groundMat = new BABYLON.StandardMaterial("groundMat", scene);
+      groundMat.diffuseTexture = makeChecker(1024, 24, "#d6dadc", "#cdd2d5");
+      groundMat.specularColor = new BABYLON.Color3(0, 0, 0); // no shiny highlights
+      ground.material = groundMat;
+
+      return scene;
+    }
+
+    const scene = createScene();
+    engine.runRenderLoop(() => scene.render());
+    addEventListener("resize", () => engine.resize());
+  </script>
+</body>
+</html>
