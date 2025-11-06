@@ -51,9 +51,8 @@ Installer fra App Store.
 
 ## Tanker om 3D-spill
 Vi skal alle lage hvert vårt lille 3D-spill.  
-Tenk enkelt – som små Flash-spill fra gamle dager.  
-Eksempler:  
-- Et spill der du styrer en ball  
+Tenk enkelt – som små spill fra Flash-tiden.  
+Eksempler:    
 - En enkel labyrint  
 - Et skytespill  
 - Et lite romskipspill  
@@ -63,10 +62,10 @@ Poenget er å starte med noe helt grunnleggende, og så bygge videre steg for st
 ---
 
 ## Vibe Coding
-Alt under gjøres under Epleklubb.
+Alt herfra gjøres under Epleklubb.
 
 Vibe Coding handler om å kode sammen med AI, ikke å be den gjøre alt for deg.  
-Du samarbeider med AI for å skape noe, og lærer ved å bygge i små og tydelige iterasjoner.
+Du samarbeider med AI for å skape noe, jo mer du forstår om teknologiene og økosystemet rundt det du bygger, jo enklere er det å komme i mål.
 
 ---
 
@@ -122,8 +121,8 @@ Velg om du vil lime inn hele index.html-filen hver gang du gjør en iterasjon, e
 
 ## Hvordan skrive gode prompts i VibeCode
 
-Dette er selve nøkkelen til at det fungerer bra.  
-Vibe coding handler om å samarbeide med AI – ikke å gi kommandoer, men å bygge sammen.
+Dette er selve nøkkelen til Prompt Engineering/Vibe Coding .  
+Vibe coding handler om å samarbeide med AI. Ikke å gi kommandoer, men å bygge sammen.
 
 ### 1. Gi AI en tydelig rolle
 Fortell hva du vil at AI skal være for deg.  
@@ -164,7 +163,7 @@ Da slipper du at AI gjetter formatet.
 ### 5. Bygg i små, tydelige iterasjoner
 Den største feilen er å prøve å bygge alt på én gang.  
 Lag heller små steg:
-1. Start med et flatt plan og en kule  
+1. Start med et flatt plan og en karakter  
 2. Legg til bevegelse  
 3. Legg til lys  
 4. Legg til hindringer  
@@ -177,6 +176,7 @@ Du må iterere og justere.
 AI forstår ikke alltid alt perfekt første gang.  
 Tenk at du bygger sammen, ikke at AI gjør alt for deg.  
 Små iterasjoner skaper flyt og fremdrift.
+Programvareutvikling tar gjerne dager, måneder, år. Husk dette når du blir utolmodig fordi chatGPT bruker 5 minutter på noe, eller du må iterere 5 ganger.
 
 ---
 
@@ -191,7 +191,7 @@ Små iterasjoner skaper flyt og fremdrift.
 ## Oppsummering
 Vibe coding handler om å komme i flyt sammen med AI.  
 Du skriver, tester, justerer, og lærer underveis.  
-Målet er ikke å få perfekt kode, men å bygge erfaring, eksperimentere og ha det gøy med prosessen.
+Målet er ikke å få perfekt kode, men å bygge noe som kjører. Som du kan teste og bruke videre.
 
 ---
 
