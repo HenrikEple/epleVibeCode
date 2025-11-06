@@ -72,7 +72,11 @@ Du samarbeider med AI for å skape noe, jo mer du forstår om teknologiene og ø
 ## Starte lokal testserver for Babylon.js-prosjektet
 
 1. Åpne VS Code og trykk på "Terminal" → "New terminal".
-2. Lag et virtuelt miljø:
+<img width="719" height="86" alt="image" src="https://github.com/user-attachments/assets/6fb10c0a-3da6-4e0e-8258-ac3a2595d8d7" />
+
+
+   
+3. Lag et virtuelt miljø:
 ```
 python3 -m venv venv
 ```
@@ -116,6 +120,7 @@ Let’s start from a simple flat map and evolve it into my own small 3D game ide
 
 ### Tips:
 Velg om du vil lime inn hele index.html-filen hver gang du gjør en iterasjon, eller bruk ChatGPT sin VSCode-integrasjon om du har den.
+<img width="548" height="375" alt="image" src="https://github.com/user-attachments/assets/690d7993-f85e-4910-a86c-796586c33bc1" />
 
 ---
 
